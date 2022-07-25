@@ -1,7 +1,11 @@
+/* ------------------------- DARK MODE ----------------------*/
+
+
 function trocarModo() {
     changeClasses();
     changeText();
 }
+
 
 function changeClasses(){
     button.classList.toggle(darkModeClass);
@@ -9,6 +13,7 @@ function changeClasses(){
     body.classList.toggle(darkModeClass);
     footer.classList.toggle(darkModeClass);
 }
+
 
 function changeText() {
     const lightMode = "Light Mode";
@@ -23,8 +28,6 @@ function changeText() {
     button.innerHTML = darkMode;
         h1.innerHTML = lightMode + " ON";
         return;
-
-
 }
 
 const darkModeClass = 'dark-mode';
@@ -34,8 +37,32 @@ const body = document.getElementsByTagName("body")[0];
 //body coloca o index dele, como só tem 1 = 0
 const footer = document.getElementsByTagName("footer")[0];
 
-
-
-
 button.addEventListener("click", trocarModo);
 
+
+
+/*------------------LISTA DE TAREFAS--------------------*/
+
+
+const inputElement = document.querySelector(".new-task-input");
+const addTaskButton = document.querySelector(".new-task-button");
+
+const validateInput = () => inputElement.value.trim().length > 0;
+const handleAddTask = () => {
+    const inputIsValid = validateInput();
+console.log(inputIsValid);
+    if (!inputIsValid) {
+        return inputElement.classList.add("error");
+    }
+};
+
+const handleInputChange = () => {
+    const inputIsValid = validateInput();
+
+    if(inputIsValid) {
+        return inputElement.classList.remove("error");
+    }
+};
+
+addTaskButton.addEventListener("click", () => handleAddTask());
+inputElement.addEventListener("change", ()=> handleInputChange());

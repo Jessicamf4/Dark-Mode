@@ -1,7 +1,19 @@
+* {
+    /*lista*/
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Light 300;
+}
 body {
+    
     background-color: bisque;
     color: rgb(66, 43, 15);
     margin: 0;
+  /*lista*/
+    display: flex;
+    align-items: center;
+    height: 100vh;
 
 }
 
@@ -60,3 +72,64 @@ button.dark-mode:hover {
 	color: #e5e8e8;
 }
 
+
+.container {
+    border: 2px solid #fff;
+    padding: 30px 40px;
+    width: 35%;
+    min-width: 500px;
+}
+
+.new-task-container{
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: o 15px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+
+.new-task-container input {
+    flex: 3;
+    font-size: 1rem;
+    border: 2px solid #d7e0d9;
+    padding: 12px;
+    font-weight: 500;
+}
+
+.new-task-container input:focus {
+    outline: none;
+    border-color: rgb(73, 87, 168);
+}
+
+.new-task-button {
+    flex: 1;
+    border-radius: 5px;
+    font-weight: 500;
+    height: 100%;
+    font-size: 1rem;
+    border: none;
+    background-color: #4e545c;
+    color: #fff;
+    padding: 12px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.tasks-container {
+    background-color: #fff;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+/* utilities*/
+
+.error {
+    border: 2px solid red !important;
+}
+
+.error::placeholder {
+    color: red ;
+}
