@@ -124,6 +124,15 @@ button.dark-mode:hover {
     width: 100%;
 }
 
+.tasks-container.dark-mode {
+    background-color: rgb(172, 163, 163);
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
 /* utilities*/
 
 .error {
@@ -132,4 +141,19 @@ button.dark-mode:hover {
 
 .error::placeholder {
     color: red ;
+}
+
+.task-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.task-item i {
+    background-color: aqua;
+    color: #fff;
+    padding: 12px;
+    border-radius: 5px;
 }
