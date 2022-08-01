@@ -61,17 +61,17 @@ console.log(inputIsValid);
     const taskItemContainer = document.createElement('div')
     taskItemContainer.classList.add('task-item')
 
-    const taskContent = document.createElement('p')
+    const taskContent = document.createElement('p');
     taskContent.innerText = inputElement.value;
 
-    taskContent.addEventListener("click", () => handClick())
+    taskContent.addEventListener("click", () => handleClick());
     
     const deleteItem = document.createElement('i');
     deleteItem.classList.add("fa-solid");
     deleteItem.classList.add("fa-trash-can");
 
-    deleteItem.addEventListener('click', () => handleDeletClick())
-   
+    deleteItem.addEventListener('click', () => handleDeletClick());
+   handleDeletClick(taskItemContainer, taskContent)
 
     taskItemContainer.appendChild(taskContent);
     taskItemContainer.appendChild(deleteItem);
@@ -81,6 +81,29 @@ console.log(inputIsValid);
     inputElement.value = "";
 
 };
+
+const handleClick = (taskContent) => {
+    const tasks = tasksContainer.childNodes;
+
+    for (const task of tasks) {
+        const currentTaskIsBeingCliked = task.firstChild.isSameNode(taskContent);
+        if (task.firstChild.isSameNode(taskContent)) {
+            task.firstChild.classList.toggle('completed');
+        }
+    }
+};
+
+const handleDeletClick = () => {
+    const tasks = tasksContainer.childNodes;
+
+    for (const task of tasks) {
+        const currentTaskIsBeingCliked = task.firstChild.isSameNode(taskContent);
+        if(task.firstChild.isSameNode()) {
+            taskItemContainer.remove();
+        }
+    }
+};
+
 
 const handleInputChange = () => {
     const inputIsValid = validateInput();
