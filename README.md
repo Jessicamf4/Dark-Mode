@@ -6,5 +6,5 @@ O Dark Mode é uma ferramenta de Alto Contraste  que deixa o fundo da página to
 </p>
 
 <p align="Center">
-<img src="dark.mp4">
+<img src="Gif.gif">
 </p>
