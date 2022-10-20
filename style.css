@@ -80,6 +80,8 @@ button.dark-mode:hover {
     min-width: 500px;
 }
 
+
+
 .new-task-container{
     background-color: #fff;
     padding: 30px 20px;
@@ -124,14 +126,6 @@ button.dark-mode:hover {
     width: 100%;
 }
 
-.tasks-container.dark-mode {
-    background-color: rgb(172, 163, 163);
-    padding: 30px 20px;
-    margin-top: 60px;
-    border-radius: 10px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    width: 100%;
-}
 
 /* utilities*/
 
