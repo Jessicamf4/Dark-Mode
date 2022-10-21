@@ -8,3 +8,8 @@ O Dark Mode é uma ferramenta de Alto Contraste  que deixa o fundo da página to
 <p align="Center">
 <img src="Gif.gif">
 </p>
+
+<p>Lista de  Tarefas, na qual é possível adicionar e excluir notas do dia-a-dia. </p>
+<p align="Center">
+<img src="gif2.gif">
+</p>
